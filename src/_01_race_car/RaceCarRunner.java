@@ -14,11 +14,24 @@ public class RaceCarRunner {
 	RaceCar car = new RaceCar("Mclaren", 2);
 		// 2. Print the RaceCar's position in the race
 	System.out.println(car.getPositionInRace());
+	
 		// 3. Crash the RaceCar
-		
+	            car.crash();
 		// 4. If the car is damaged. Bring it in for a pit stop.
-
-		// 5. Help the car move into first place.
-
+	            if (car.damaged) {
+		car.pit();
+		
+		car.overtake();
+		car.overtake();
+		car.overtake();
+		car.overtake();
+	            }
+	}
+// 5. Help the car move into first place.
+	
+	
+	private static void crash(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 }
