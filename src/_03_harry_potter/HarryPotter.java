@@ -16,12 +16,26 @@ package _03_harry_potter;
 
 public class HarryPotter {
 
+	
+	
+	HarryPotter Harry = new HarryPotter();
+
+	
+	Harry.makeInvisible(true);
+	Harry.spyOnSnape(true);
+	Harry.makeVisible(true);
+	Harry.castSpell(true);
+	
+	
+	
 	private boolean cloakOn;
 
 	HarryPotter() {
 		System.out.println("making Harry Potter...");
 	}
 
+
+	
 	void castSpell(String spell) {
 		System.out.println("casting spell: " + spell);
 	}
