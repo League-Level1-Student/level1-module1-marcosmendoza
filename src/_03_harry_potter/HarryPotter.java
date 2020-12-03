@@ -18,15 +18,6 @@ public class HarryPotter {
 
 	
 	
-	HarryPotter Harry = new HarryPotter();
-
-	
-	Harry.makeInvisible(true);
-	Harry.spyOnSnape(true);
-	Harry.makeVisible(true);
-	Harry.castSpell(true);
-	
-	
 	
 	private boolean cloakOn;
 
