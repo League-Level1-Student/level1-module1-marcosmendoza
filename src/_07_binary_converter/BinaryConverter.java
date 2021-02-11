@@ -1,5 +1,6 @@
 package _07_binary_converter;
 
+import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -32,12 +33,12 @@ public class BinaryConverter implements ActionListener {
 	}
 
 	public static void main(String[] args) {
-
-		
+		BinaryConverter converter = new BinaryConverter();
+		converter.button();
 
 	}
 
-	public void button(String[] args) {
+	public void button() {
 
 		JButton button = new JButton();
 		button.addActionListener(this);
@@ -45,6 +46,12 @@ public class BinaryConverter implements ActionListener {
 		JPanel panel = new JPanel();
 		JTextField textfield = new JTextField(20);
 		JLabel label = new JLabel();
+		frame.setVisible(true);
+		frame.add(panel);
+		panel.add(label);
+		panel.add(button);
+		panel.add(textfield);
+		
 		
 	}
 
