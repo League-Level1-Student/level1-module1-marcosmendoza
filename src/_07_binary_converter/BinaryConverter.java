@@ -31,7 +31,10 @@ public class BinaryConverter implements ActionListener {
 			return "-";
 		}
 	}
-
+	
+JTextField textfield = new JTextField(20);
+		JLabel label = new JLabel();
+		JFrame frame = new JFrame();
 	public static void main(String[] args) {
 		BinaryConverter converter = new BinaryConverter();
 		converter.button();
@@ -39,25 +42,34 @@ public class BinaryConverter implements ActionListener {
 	}
 
 	public void button() {
+		
 
 		JButton button = new JButton();
 		button.addActionListener(this);
-		JFrame frame = new JFrame();
+		
 		JPanel panel = new JPanel();
-		JTextField textfield = new JTextField(20);
-		JLabel label = new JLabel();
+		
 		frame.setVisible(true);
 		frame.add(panel);
 		panel.add(label);
 		panel.add(button);
 		panel.add(textfield);
+		frame.pack();
 		
 		
 	}
-
+	// 2^3  2^2  2^1  2^0  
+	// 1    0    1    0  = 10 in decimal
+	
+	//  0    1    1   0    1   0   0   1 in binary
+	//  0 + 64 + 32 + 0 +  8 + 0 + 0 + 1 = 105
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-
+		String answer = textfield.getText();
+		answer = convert(answer);
+		label.setText(answer);
+		frame.pack();
 	}
 }
